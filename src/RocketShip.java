@@ -1,7 +1,7 @@
 
 public class RocketShip {
 	
-	public static final int SIZE= 3;
+	public static final int SIZE= 10;
 	
 	public static void main(String[] args) {
 		partOne();
@@ -17,7 +17,7 @@ public class RocketShip {
 		
 	public static void partOne() {
 		for (int line=1; line<= (2*SIZE)-1; line++) {
-			for (int space=1; space<= (-1*line)+6; space++) {
+			for (int space=1; space<= 2*SIZE-line; space++) {
 				System.out.print(" ");
 			}
 			for (int forwardslash= 1; forwardslash<= 1*line; forwardslash++) {
@@ -53,19 +53,19 @@ public class RocketShip {
 			for (int straightline= 1; straightline<=1; straightline++) {
 				System.out.print("|");
 			}
-			for (int periods=1; periods<= (-1*line)+3; periods++) {
+			for (int periods=1; periods<= (1*SIZE)-line; periods++) {
 				System.out.print(".");
 			}
 			for (int triangle=1; triangle<= 1*line; triangle++) {
 				System.out.print("/\\");
 			}
-			for (int midperiod=1; midperiod<= (-2*line)+6; midperiod++) {
+			for (int midperiod=1; midperiod<= (2*SIZE)-(line*2); midperiod++) {
 				System.out.print(".");
 			}
 			for (int triangle=1; triangle<= 1*line; triangle++) {
 				System.out.print("/\\");
 			}
-			for (int periods=1; periods<= (-1*line)+3; periods++) {
+			for (int periods=1; periods<= (1*SIZE)-line; periods++) {
 				System.out.print(".");
 			}
 			for (int straightline= 1; straightline<=1; straightline++) {
@@ -83,13 +83,13 @@ public class RocketShip {
 			for (int periods=1; periods<= 1*line-1; periods++) {
 				System.out.print(".");
 			}
-			for (int vtrangles=1; vtrangles<= -1*line +1; vtrangles++) {
+			for (int vtrangles=1; vtrangles<= SIZE-line+1; vtrangles++) {
 				System.out.print("\\/");
 			}
 			for (int midperiods=1; midperiods<= 2*line-2; midperiods++) {
 				System.out.print(".");
 			}
-			for (int vtrangles=1; vtrangles<= -1*line +1; vtrangles++) {
+			for (int vtrangles=1; vtrangles<= SIZE-line+1; vtrangles++) {
 				System.out.print("\\/");
 			}
 			for (int periods=1; periods<= 1*line-1; periods++) {
